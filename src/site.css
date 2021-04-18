@@ -1,0 +1,5 @@
+/* word 'none' can be obtained from js file e.g.=>> 
+    lineChart -> types -> 'none':'line' */
+    #timeline .c3-line-none {
+        stroke-width: 5px;
+    }
