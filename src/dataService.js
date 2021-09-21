@@ -1,21 +1,16 @@
-var dataService = function () {
 
-    let getUsersUrl = 'https://reqres.in/api/users?page=2';
-    let createUserUrl = 'https://reqres.in/api/users';
+import ajaxCall from './ajaxService.js'
 
-    getUsers = function () {
-        //return a promise
-        return ajaxService.makeAjaxRequest('GET', getUsersUrl, null)
-    }
+const getUsersUrl = 'https://reqres.in/api/users?page=2';
+const createUserUrl = 'https://reqres.in/api/users';
 
-    createUser = function (userObject) {       
-        return ajaxService.makeAjaxRequest('POST', createUserUrl, userObject);
-    }
+function getUsers() {
+    //return a promise
+    return ajaxCall('GET', getUsersUrl, null)
+}
 
-    //public API
-    return {
-        getUsers: getUsers,
-        createUser: createUser
-    };
+function createUser (userObject) {
+    return ajaxCall('POST', createUserUrl, userObject);
+}
 
-}();
+export {getUsers as getUsersList, createUser};

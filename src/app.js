@@ -1,47 +1,34 @@
+import {displaySite, displayTitle} from './siteInfo.js'
+import {getUsersList, createUser} from './dataService.js'
 
-var app = function () {
 
-    //private members
-    title = 'Structure JavaScript';
 
-    displayTitle = function () {
-        alert(this.title);
-    }
+function displaySiteInfo(){
+    displayTitle();
+    displaySite();
+}
 
-    displaySite = function () {
-        alert('site info...');
-    }
+function getUsers() {
 
-    getUsers = function () {
+   getUsersList()
+        .done(function (data) {
+            console.log(data);
 
-        dataService
-            .getUsers()
-            .done(function (data) {
-                console.log(data);
+        }).fail(function (e) {
+            console.log('error', e);
+        });
+}
 
-            }).fail(function (e) {
-                console.log('error', e);
-            });
-    }
+function createAppUser(userObj) {
 
-    createUser = function (userObj) {
+    createUser(userObj)
+        .done(function (data) {
+            console.log(data);
 
-        dataService
-            .createUser(userObj)
-            .done(function (data) {
-                console.log(data);
+        }).fail(function (e) {
+            console.log('error', e);
+        });
+}
 
-            }).fail(function (e) {
-                console.log('error', e);
-            });
-    }
 
-    //public API
-    return {
-        title: title,
-        displayTitle: displayTitle,
-        getUsers: getUsers,
-        createUser: createUser
-    };
-
-}();
+export { displaySiteInfo, getUsers, createAppUser }

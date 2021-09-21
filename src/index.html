@@ -19,26 +19,20 @@
   <h2>Structruing JavaScript</h2>
 
   <!-- App Code -->
-  <script type="text/javascript" src="dataService.js"></script>
-  <script type="text/javascript" src="ajaxService.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <script type="module" src="./app.js" ></script>
+
+
+  <script type="module">
+    import {displaySiteInfo, getUsers} from './app.js';
+     displaySiteInfo();
+     getUsers();
+    
+  </script>
+
 
   <script>
     $(document).ready(function () {
-      console.log(app.title);
-      //app.displayTitle();
-      //app.displaySite();//this will not work
-
-      //Get users data and write it to console
-      app.getUsers();
-
-      //Create New User: POST Example
-      let newUser = {
-        "name": "Dexter Morgen",
-        "job": "crime lab analyst"
-      };
-     // app.createUser(newUser); //make sure CORS is enabled
-
+     
 
     });
   </script>
