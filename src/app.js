@@ -1,34 +1,10 @@
-import {displaySite, displayTitle} from './siteInfo.js'
-import {getUsersList, createUser} from './dataService.js'
+import { Car, Truck } from "./model/car.js";
 
 
+let car1 = new Car('A123', 'Test Car1', 'Tesla');
+console.log(`${car1.id} : ${car1.name}`);
+car1.start();
 
-function displaySiteInfo(){
-    displayTitle();
-    displaySite();
-}
-
-function getUsers() {
-
-   getUsersList()
-        .done(function (data) {
-            console.log(data);
-
-        }).fail(function (e) {
-            console.log('error', e);
-        });
-}
-
-function createAppUser(userObj) {
-
-    createUser(userObj)
-        .done(function (data) {
-            console.log(data);
-
-        }).fail(function (e) {
-            console.log('error', e);
-        });
-}
-
-
-export { displaySiteInfo, getUsers, createAppUser }
+let truck1 = new Truck('B444', 'Test Truck1',4);
+console.log(`${truck1.id} : ${truck1.name}: ${truck1.storageArea}`);
+truck1.start();
