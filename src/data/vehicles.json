@@ -1,0 +1,36 @@
+[{
+    "id": 1, 
+    "name": "Test Car1",
+    "type": "car",
+    "make": "Tesla"    
+},
+{
+    "id": 2, 
+    "name": "Test Car2",
+    "type": "car",
+    "make": "Audi"    
+},
+{
+    "id": 3, 
+    "name": "Test Car3",
+    "type": "car",
+    "make": "Kia"    
+},
+{
+    "id": 4, 
+    "name": "Test Truck1",
+    "type": "truck",
+    "storageArea": 4    
+},
+{
+    "id": 5, 
+    "name": "Test Truck2",
+    "type": "truck",
+    "storageArea": 2    
+},
+{
+    "id": 6, 
+    "name": "Test Truck3",
+    "type": "truck",
+    "storageArea": 3    
+}]
