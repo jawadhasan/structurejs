@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel dev ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./",
     "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +20,8 @@
   },
   "homepage": "https://github.com/jawadhasan/structurejs#readme",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "jquery": "^3.6.0"
