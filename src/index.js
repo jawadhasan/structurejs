@@ -3,14 +3,12 @@ import "./import-jquery.js";
 import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-import {Button} from './ui/button.js';
+import {NavBar} from './ui/nav-bar.js';
 
+let navBar = new NavBar('Structure-JS-Code');
 
-let b = new Button('New Button!');
-b.appendToElement($('body')); //wrap it as jQuery object
+navBar.addLink('Home','home');
+navBar.addLink('Vehicles','vehicles');
+navBar.addLink('About','about');
 
-
-$(function () {
-    console.log('ready function');
- 
-});
+navBar.appendToElement($('body'));
