@@ -5,6 +5,9 @@
 
 dist/
 .cache/
+.cache
+
+
 # User-specific files
 *.suo
 *.user
