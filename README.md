@@ -17,3 +17,9 @@
     - create import-jquery.js file for jquery import purposes
     
     -   UI classes
+
+-parceljs - I have integrated parceljs to the project. see following post for the details:
+https://hexquote.com/parcel-js-a-blazing-fast-zero-configuration-web-application-bundler/
+https://hexquote.com/import-jquery-and-jquery-ui-using-parcel-js/
+
+
